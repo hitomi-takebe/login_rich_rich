@@ -1,0 +1,111 @@
+/* reset.css */
+/* 各ブラウザのデフォルトスタイルをリセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    /* 1rem = 10px */
+}
+
+body {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #333;
+    background-color: #e6ee9c;
+}
+
+/* style.css */
+
+/* カード全体のスタイル */
+.card {
+    max-width: 400px;
+    background-color: #fff;
+    margin: 50px auto;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* タイトルのスタイル */
+.card__title {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* コンテンツメッセージのスタイル */
+.card__content {
+    font-size: 1.6rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* フォームのスタイル */
+.card__form form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ラベルのスタイル */
+.card__form label {
+    font-size: 1.4rem;
+    color: #333;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.name,.email,.password
+{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.name:focus,
+.email:focus,
+.password:focus
+{
+    border-color: #6bdae5;
+    background-color: #fff;
+}
+
+/* ボタンのスタイル */
+.submit{
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.6rem;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    background-color: #74dce7;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 2rem;
+    transition: all 0.3s ease;
+}
+
+/* ボタンがホバーされたときのスタイル */
+.submit:hover
+{
+    background-color: #39cddc;
+}
+
+/* ボタンが押されたときのスタイル */
+.submit:active
+{
+    background-color: #2b9aa5;
+}
