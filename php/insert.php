@@ -4,19 +4,10 @@ $email = $_POST['email'];
 $password  = password_hash($_POST['password'], PASSWORD_DEFAULT);  //**password_hash()**を使ってハッシュ化したパスワードをデータベースに登録
 
 
+//db接続
+require_once('funcs.php');
+$pdo = db_conn();
 
-//ローカルのデータベースにアクセスするための必要な情報を変数に渡す
-$db_name = 'gs_db';
-$db_host = 'localhost';
-$db_id = 'root';
-$db_pw ='';
-
-//try catch構文でデータベースの情報取得を実施
-try {
-  $pdo = new PDO('mysql:dbname='.$db_name.';charset=utf8;host='.$db_host,$db_id,$db_pw);
-} catch (PDOException $e) {
-  exit('DBConnectError:'.$e->getMessage());
-}
 $stmt = $pdo->prepare("INSERT
                             INTO
                         account(id, name, email,password, date)
